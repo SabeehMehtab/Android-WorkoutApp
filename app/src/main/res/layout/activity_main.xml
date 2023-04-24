@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/screen_layout_padding"
+    tools:context=".MainActivity"
+    tools:ignore="hardcodedtext">
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="Normal Mode"
+        android:textColor="@color/colorPrimaryDark"
+        app:switchMinWidth="58dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:thumbTint="@color/teal_700"
+        app:trackTint="@color/bettergray"
+        />
+
+    <ImageView
+        android:id="@+id/workoutImage"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/img_main_page"
+        app:layout_constraintBottom_toTopOf="@id/flStart"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="PRESS HERE TO   ---->"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/flStart"
+        app:layout_constraintEnd_toStartOf="@id/flStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/workoutImage" />
+
+    <FrameLayout
+        android:id="@+id/flStart"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/circular_border_ripple_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/workoutImage">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="START"
+            android:textColor="@color/colorSecondaryDark"
+            android:textSize="@dimen/button_text_size"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flBMI"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/bmi_bg"
+        app:layout_constraintBottom_toTopOf="@id/imgHistory"
+        app:layout_constraintEnd_toStartOf="@id/imgExerciseInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flStart">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="BMI"
+            android:textColor="@color/black"
+            android:textSize="@dimen/button_text_size"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Calculator"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/flBMI"
+        app:layout_constraintStart_toStartOf="@id/flBMI"
+        app:layout_constraintTop_toBottomOf="@id/flBMI" />
+
+    <ImageView
+        android:id="@+id/imgExerciseInfo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/workout_image"
+        app:layout_constraintBottom_toTopOf="@id/imgHistory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/flBMI"
+        app:layout_constraintTop_toBottomOf="@id/flStart" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="Workout Info"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/imgExerciseInfo"
+        app:layout_constraintStart_toStartOf="@id/imgExerciseInfo"
+        app:layout_constraintTop_toBottomOf="@id/imgExerciseInfo" />
+
+    <ImageView
+        android:id="@+id/imgHistory"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/history_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flBMI" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="History"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/imgHistory"
+        app:layout_constraintStart_toStartOf="@id/imgHistory"
+        app:layout_constraintTop_toBottomOf="@id/imgHistory" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

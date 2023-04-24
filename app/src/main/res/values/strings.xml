@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">7min-workout</string>
+    <string name="alert_title">ARE YOU SURE?</string>
+    <string name="alert_message">This will stop your workout! You\'ve come this far, are you sure you want to quit?</string>
+    <string name="resume">RESUME</string>
+    <string name="quit">QUIT</string>
+    <string name="ready">GET READY FOR</string>
+    <string name="rest">REST PERIOD</string>
+</resources>
